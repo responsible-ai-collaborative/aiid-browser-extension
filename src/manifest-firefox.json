@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AIID Widget",
+  "description": "A widget for making submissions to the aiid",
+  "permissions": ["activeTab", "scripting"],
+  "version": "0.1",
+  "action": {
+    "default_icon": "aiid.png"
+  },
+  "background": {
+      "scripts": ["background.js"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "puppeteer": "^22.8.0",
+    "web-ext": "^7.11.0"
+  },
+  "scripts": {
+    "build-firefox": "mkdir -p build && rm -rf build/firefox && cp -r src build/firefox && mv build/firefox/manifest-firefox.json build/firefox/manifest.json && rm -f build/aiid-widget-web-ext.zip && web-ext build --source-dir build/firefox --artifacts-dir build --filename aiid-widget-web-ext.zip --overwrite-dest",
+    "build-chromium": "mkdir -p build && rm -rf build/chromium && cp -r src build/chromium && mv build/chromium/manifest-chromium.json build/chromium/manifest.json",
+    "build": "npm run build-firefox && npm run build-chromium",
+    "test": "jest test"
+  }
+}
