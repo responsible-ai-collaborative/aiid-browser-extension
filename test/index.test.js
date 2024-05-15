@@ -19,7 +19,8 @@ afterEach(async () => {
 
 let browser;
 
-test('Test', async () => {
-
+test('Extension loads and service worker starts in Chrome', async () => {
+  const extBackgroundTarget = await browser.waitForTarget(t => t.type() === 'service_worker');
+  const extWorker = await extBackgroundTarget.worker();
 });
 

@@ -17,5 +17,5 @@ Tests can be run with
 npm run test
 ```
 
-Currently this will load the extension in Chromium and then run a test which does nothing.
+Currently this will test that the extension loads correctly in Chromium.
 
